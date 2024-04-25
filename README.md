@@ -3,4 +3,4 @@
 <p>Check my prewiew website</p>
 <p>HTML5, JavaScript, CSS</p>
 <h3>Screenshoots</h3>
-<img src="img/screen.png" width="600" height="500"/>
+<img src="img/screen.png" height="500"/>
