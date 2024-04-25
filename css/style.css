@@ -1,11 +1,10 @@
-
-
 body {
     
     margin: 0;
     padding: 0;
-    background-image: url('../img/stars.png');
+    background-image: url('img/stars.png');
     background-size: cover;
+    transition: background-image 1s ease;
 }
 
 header {
@@ -21,6 +20,21 @@ header {
     top: 3px;
     right: 605px;
 }
+
+.title::after {
+  content: "dont touch stars";
+  font-family:"Indie Flower" ;
+  font-size: 10pt;
+  position: absolute;
+  bottom: 0;
+  left: 70px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.title:hover::after {
+  opacity: 1;
+}
 .contacts{
     font-size: 20pt;
     position: fixed;
@@ -32,6 +46,17 @@ main {
     text-align: center;
     padding: 20px;
 }
+#hidden-button{
+    opacity: 0;
+    position: fixed;
+    top: 210px;
+    left: 55px;
+    height:50px;
+    width: 50px;
+    cursor: pointer;
+    
+}
+
 
 .image-links {
     display: flex;
@@ -97,6 +122,8 @@ main {
     cursor: pointer;
 }
 
+
+
 #open-video:hover {
     color: pink;
     background-color: white;
@@ -128,7 +155,7 @@ main {
     left: -15px;
     width:150px; /* Регулирует размер бабочки */
     height: 150px; /* Регулирует размер бабочки */
-    background-image: url('../img/heart.gif');
+    background-image: url('img/heart.gif');
     background-size: cover;
     animation: flutter 9s infinite linear;
 }
@@ -139,6 +166,5 @@ main {
 }
 @font-face {
 font-family: "Blackberry";
-src: url("../fonts/Blackberry.otf") format("opentype");
+src: url("fonts/Blackberry.otf") format("opentype");
 }
-

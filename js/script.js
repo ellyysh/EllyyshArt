@@ -25,3 +25,19 @@ triggerLinks.forEach(link => {
         }, 3000);
     });
 });
+
+        function changeBackgroundAndPlaySound() {
+            var body = document.querySelector('body');
+            body.style.backgroundImage = 'url(img/bg2.png)';
+            body.style.backgroundSize = 'cover';
+
+            var audio = new Audio('img/whistle.mp3');
+            audio.play();
+
+            setTimeout(function() {
+                body.style.backgroundImage = 'url(img/stars.png)';
+            }, 5000);
+        }
+
+      
+
