@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <title>Ellysh Art</title>
+</head>
+<body>
+    <header>
+        <div class="butterfly"></div>
+        <div class="title">
+        <h1>EllyshArt</h1>
+        
+        </div>
+        
+        <div class="contacts">
+            <p>veryberry.khv@gmail.com<br>+7 999 080 86 45</p>
+        </div>
+    </header>
+  
+    <main>
+       
+        <h2>Hi! Im artist frow VDK Mishel. <br>You can check my contacts and sites on this page </h2>
+       
+        <a href="https://r.mtdv.me/videos/ellyysh"><img src="img/shop.png" class="shop-image"></a>
+        
+        <div id="video-container">
+          <video id="video" controls>
+           <source src="img/video.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div id="floating-image-container">
+            <img src="img/meta.png" id="floating-image">
+            </div>
+        
+             <div class="image-links">
+                 <a href="https://t.me/ellyysh"><img src="img/tg.jpg"></a>
+                 <a href="#"><img src="img/ig.jpg" class="trigger"></a>
+                 <a href="https://discord.gg/8MgNTutK"><img src="img/dc.jpg"></a>
+                 <a href="https://github.com/ellyysh"><img src="img/gh.png"></a>
+             </div>
+            
+            <div class="qrcode">
+             <h3>scan and see magic</h3>
+                 <img src="img/qr.png" alt="QR Code" class="qr-image">
+                     <p>problem?</p>
+                 <button id="open-video">change</button>
+                 
+             
+          </div>
+            
+            <button onclick="changeBackgroundAndPlaySound()" id="hidden-button">
+          
+                <script>
+                    function changeBackgroundAndPlaySound() {
+                        var body = document.querySelector('body');
+                        body.style.backgroundImage = 'url(img/bg2.png)';
+                        body.style.backgroundSize = 'cover';
+
+                        var audio = new Audio('img/whistle.mp3');
+                        audio.play();
+
+                        setTimeout(function() {
+                            body.style.backgroundImage = 'url(img/stars.png)';
+                        }, 5000);
+                    }
+
+                  
+                </script>
+           
+             
+    </main>
+    <script src="js/script.js"></script>
+   <style>
+       
+       body {
+           
+           margin: 0;
+           padding: 0;
+           background-image: url('img/stars.png');
+           background-size: cover;
+           transition: background-image 1s ease;
+       }
+
+       header {
+           font-family: "Blackberry";
+           font-size: 25pt;
+           background-color: pink;
+           color: white;
+           text-align: center;
+           height:170px;
+       }
+       .title{
+           position: fixed;
+           top: 3px;
+           right: 605px;
+       }
+
+       .title::after {
+         content: "dont touch stars";
+         font-family:"Indie Flower" ;
+         font-size: 10pt;
+         position: absolute;
+         bottom: 0;
+         left: 70px;
+         opacity: 0;
+         transition: opacity 0.3s;
+       }
+
+       .title:hover::after {
+         opacity: 1;
+       }
+       .contacts{
+           font-size: 20pt;
+           position: fixed;
+           top: 20px;
+           right: 50px;
+       }
+       main {
+           font-family: "Indie Flower";
+           text-align: center;
+           padding: 20px;
+       }
+       #hidden-button{
+           opacity: 0;
+           position: fixed;
+           top: 210px;
+           left: 55px;
+           height:50px;
+           width: 50px;
+           cursor: pointer;
+           
+       }
+     
+
+       .image-links {
+           display: flex;
+           justify-content: center;
+           gap: 20px;
+       }
+
+
+       .image-links img {
+           width: 50px;
+           height: 50px;
+           border: 2px solid #333;
+           border-radius: 10px;
+           
+           transition: transform 0.3s;
+       }
+
+       .image-links img:hover {
+           transform: scale(1.2);
+           border-color: pink;
+       }
+
+       .shop-image {
+           position: fixed;
+           bottom: 20px;
+           right: 20px;
+           width: 200px;
+           height: 200px;
+           z-index: 9999;
+           transition: transform 0.3s;
+       }
+
+       .shop-image:hover {
+           transform: rotate(7deg);
+           
+       }
+
+
+       #video-container {
+           display: none;
+           position: fixed;
+           top: 0;
+           left: 0;
+           width: 100vw;
+           height: 100vh;
+           background-color: black;
+           z-index: 9999;
+         }
+         #video {
+           width: 100%;
+           height: 100%;
+           object-fit: contain;
+         }
+       #open-video {
+           margin-top: 2px;
+           font-size: 24px;
+           font-family: "Indie Flower";
+           color: white;
+           background-color: pink;
+           padding: 5px 10px;
+           border: none;
+           border-radius: 10px;
+           cursor: pointer;
+       }
+       
+       
+
+       #open-video:hover {
+           color: pink;
+           background-color: white;
+           
+       }
+       #floating-image-container {
+           position: fixed;
+           bottom: -350px;
+           left: 50%;
+           transform: translateX(-50%);
+           transition: bottom 1s;
+       }
+
+       #floating-image {
+           max-width: 100%;
+           max-height: 80vh;
+       }
+       .qrcode {
+           font-size:16pt;
+           
+             
+          }
+       .qr-image{
+           width: 150px;
+           height: 150px;
+       }
+       .butterfly {
+           position: absolute;
+           left: -15px;
+           width:150px; /* Регулирует размер бабочки */
+           height: 150px; /* Регулирует размер бабочки */
+           background-image: url('img/heart.gif');
+           background-size: cover;
+           animation: flutter 9s infinite linear;
+       }
+
+       @keyframes flutter {
+           0% { transform: translate(0, 0); }
+           100% { transform: translate(1400px, 0); }
+       }
+       @font-face {
+       font-family: "Blackberry";
+       src: url("fonts/Blackberry.otf") format("opentype");
+       }
+
+</style>
+       
+</body>
+</html>

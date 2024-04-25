@@ -1,0 +1,144 @@
+
+
+body {
+    
+    margin: 0;
+    padding: 0;
+    background-image: url('../img/stars.png');
+    background-size: cover;
+}
+
+header {
+    font-family: "Blackberry";
+    font-size: 25pt;
+    background-color: pink;
+    color: white;
+    text-align: center;
+    height:170px;
+}
+.title{
+    position: fixed;
+    top: 3px;
+    right: 605px;
+}
+.contacts{
+    font-size: 20pt;
+    position: fixed;
+    top: 20px;
+    right: 50px;
+}
+main {
+    font-family: "Indie Flower";
+    text-align: center;
+    padding: 20px;
+}
+
+.image-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+.image-links img {
+    width: 50px;
+    height: 50px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    
+    transition: transform 0.3s;
+}
+
+.image-links img:hover {
+    transform: scale(1.2);
+    border-color: pink;
+}
+
+.shop-image {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 200px;
+    height: 200px;
+    z-index: 9999;
+    transition: transform 0.3s;
+}
+
+.shop-image:hover {
+    transform: rotate(7deg);
+    
+}
+
+
+#video-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    z-index: 9999;
+  }
+  #video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+#open-video {
+    margin-top: 2px;
+    font-size: 24px;
+    font-family: "Indie Flower";
+    color: white;
+    background-color: pink;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#open-video:hover {
+    color: pink;
+    background-color: white;
+    
+}
+#floating-image-container {
+    position: fixed;
+    bottom: -350px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: bottom 1s;
+}
+
+#floating-image {
+    max-width: 100%;
+    max-height: 80vh;
+}
+.qrcode {
+    font-size:16pt;
+    
+      
+   }
+.qr-image{
+    width: 150px;
+    height: 150px;
+}
+.butterfly {
+    position: absolute;
+    left: -15px;
+    width:150px; /* Регулирует размер бабочки */
+    height: 150px; /* Регулирует размер бабочки */
+    background-image: url('../img/heart.gif');
+    background-size: cover;
+    animation: flutter 9s infinite linear;
+}
+
+@keyframes flutter {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(1400px, 0); }
+}
+@font-face {
+font-family: "Blackberry";
+src: url("../fonts/Blackberry.otf") format("opentype");
+}
+
